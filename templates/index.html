@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f8f2;
+        }
+
+        header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #4caf50;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            font-size: 2em;
+        }
+
+        .content {
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin: 0 0 10px;
+        }
+
+        .card-content p {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        footer {
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Agriculture Portal</h1>
+    </header>
+
+    <nav>
+        <a href="#crops">Crops</a>
+        <a href="#techniques">Techniques</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero">
+        Empowering Farmers with Modern Agriculture
+    </section>
+
+    <section class="content" id="crops">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1582515073490-d5c1d0f03c86?auto=format&fit=crop&w=800&q=80" alt="Wheat Field">
+            <div class="card-content">
+                <h3>Wheat Cultivation</h3>
+                <p>Learn best practices for growing wheat efficiently and sustainably.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600195077070-9c7e59e6f05a?auto=format&fit=crop&w=800&q=80" alt="Rice Field">
+            <div class="card-content">
+                <h3>Rice Farming</h3>
+                <p>Techniques for increasing rice yield while conserving water.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1599058917213-3e9ee6894c68?auto=format&fit=crop&w=800&q=80" alt="Vegetables">
+            <div class="card-content">
+                <h3>Vegetable Gardening</h3>
+                <p>Step-by-step guide for growing healthy vegetables at home or farm.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content" id="techniques">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581091215366-0cf1f84b3b95?auto=format&fit=crop&w=800&q=80" alt="Tractor">
+            <div class="card-content">
+                <h3>Modern Machinery</h3>
+                <p>Using tractors and modern tools for efficient farming operations.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1618236022511-fcd38a4899f3?auto=format&fit=crop&w=800&q=80" alt="Irrigation">
+            <div class="card-content">
+                <h3>Irrigation Techniques</h3>
+                <p>Learn about drip irrigation, sprinklers, and water management.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1618236756213-4f6a1c4e86fa?auto=format&fit=crop&w=800&q=80" alt="Organic Farming">
+            <div class="card-content">
+                <h3>Organic Farming</h3>
+                <p>Benefits of organic practices for crops and soil health.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content" id="news">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1524594151462-15735aa0b716?auto=format&fit=crop&w=800&q=80" alt="Agriculture News">
+            <div class="card-content">
+                <h3>Latest News</h3>
+                <p>Stay updated with agriculture trends, market prices, and innovations.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>© 2025 Agriculture Portal | Contact: info@agriculture.com</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        const links = document.querySelectorAll('nav a');
+        for(let link of links){
+            link.addEventListener('click', function(e){
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+    </script>
+</body>
+</html>
