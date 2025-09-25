@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: '<your-github-repo-link>'
+                git branch: 'main', url: 'https://github.com/dilkkumar/flask_app.git'
             }
         }
 
@@ -39,3 +39,4 @@ pipeline {
         }
     }
 }
+
